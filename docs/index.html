@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ProdAssist — Pro camera controls for Android</title>
+  <meta name="description" content="ProdAssist turns your Android phone into a controllable cinema camera: manual exposure, monitoring tools, HDMI out, RTMP, Extra Cam mixer, and a Windows companion that acts as a webcam for OBS, Zoom, and Teams." />
+  <meta name="theme-color" content="#0f1419" />
+  <link rel="icon" href="assets/icon-512.png" type="image/png" />
+  <meta property="og:title" content="ProdAssist — Pro camera controls for Android" />
+  <meta property="og:description" content="Manual camera, live graphics, HDMI, RTMP, and a Windows webcam companion. Get ProdAssist on Google Play." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://rrkevon.github.io/prodassist-landing/" />
+  <meta property="og:image" content="https://rrkevon.github.io/prodassist-landing/assets/phone-01-hero.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ProdAssist for Android" />
+  <meta name="twitter:description" content="Cinema-style controls, streaming, and a Windows companion webcam." />
+  <meta name="twitter:image" content="https://rrkevon.github.io/prodassist-landing/assets/phone-01-hero.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "ProdAssist",
+    "operatingSystem": "Android",
+    "applicationCategory": "PhotographyApplication",
+    "description": "Manual camera controls, monitoring, HDMI program out, RTMP streaming, Extra Cam mixer, and Windows companion webcam output.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD",
+      "description": "Free tier with optional Pro and Studio subscriptions"
+    },
+    "sameAs": [
+      "https://play.google.com/store/apps/details?id=com.rozhaustech.prodassist",
+      "https://play.google.com/apps/testing/com.rozhaustech.prodassist",
+      "https://rozhawebdesigns.com/technologies/prodassist/v2/"
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "Rozha's Technologies"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --bg: #0f1419;
+      --surface: #1a222c;
+      --text: #eef2f7;
+      --muted: #9aa8b8;
+      --accent: #3d9cf0;
+      --accent-dim: #2563a8;
+      --border: rgba(255,255,255,0.08);
+      --radius: 14px;
+      --max: 960px;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+    }
+    a { color: var(--accent); }
+    a:hover { color: #6bb8ff; }
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 1.25rem; }
+    header {
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text);
+      text-decoration: none;
+    }
+    .brand img { width: 44px; height: 44px; border-radius: 12px; }
+    .hero {
+      padding: 2.5rem 0 2rem;
+      display: grid;
+      gap: 2rem;
+    }
+    @media (min-width: 768px) {
+      .hero { grid-template-columns: 1fr 1.1fr; align-items: center; }
+    }
+    h1 {
+      font-size: clamp(1.85rem, 4vw, 2.65rem);
+      line-height: 1.15;
+      margin: 0 0 1rem;
+      letter-spacing: -0.02em;
+    }
+    .lede { color: var(--muted); font-size: 1.05rem; margin: 0 0 1.5rem; }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1rem; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.85rem 1.25rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--accent), var(--accent-dim));
+      color: #fff;
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .note { font-size: 0.85rem; color: var(--muted); margin: 0.5rem 0 0; }
+    .hero-shot {
+      width: 100%;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: 0 24px 60px rgba(0,0,0,0.45);
+    }
+    section { padding: 2.5rem 0; border-top: 1px solid var(--border); }
+    h2 { font-size: 1.45rem; margin: 0 0 1rem; }
+    .grid-3 {
+      display: grid;
+      gap: 1rem;
+    }
+    @media (min-width: 640px) { .grid-3 { grid-template-columns: repeat(3, 1fr); } }
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.15rem;
+    }
+    .card strong { display: block; margin-bottom: 0.35rem; }
+    .card span { color: var(--muted); font-size: 0.9rem; }
+    ul.features { margin: 0; padding-left: 1.2rem; color: var(--muted); }
+    ul.features li { margin-bottom: 0.5rem; }
+    .shots {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1.25rem;
+    }
+    @media (min-width: 640px) { .shots { grid-template-columns: 1fr 1fr; } }
+    .shots img {
+      width: 100%;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+    }
+    footer {
+      padding: 2rem 0 3rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+      border-top: 1px solid var(--border);
+    }
+    footer a { color: var(--muted); }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <a class="brand" href="#top">
+      <img src="assets/icon-512.png" width="44" height="44" alt="" />
+      ProdAssist
+    </a>
+  </header>
+
+  <main id="top">
+    <section class="hero wrap">
+      <div>
+        <h1>Your phone as a pro camera — and a PC webcam.</h1>
+        <p class="lede">
+          Manual ISO, shutter, white balance, and focus. Histograms, zebras, and peaking.
+          Beauty, live graphics, Extra Cam mixer, HDMI program out, RTMP, and phone remotes.
+          On Windows, the companion turns whichever phone is on air into a webcam for OBS, Zoom, and Teams.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.rozhaustech.prodassist" rel="noopener">Get on Google Play</a>
+          <a class="btn btn-ghost" href="https://rozhawebdesigns.com/technologies/Android-testings-rozha-apps/" rel="noopener">Join closed testing</a>
+        </div>
+        <p class="note">
+          Closed test also available:
+          <a href="https://play.google.com/apps/testing/com.rozhaustech.prodassist" rel="noopener">direct Play opt-in link</a>
+          (after your email is on the tester list).
+        </p>
+        <p class="note" style="margin-top:1rem;">
+          <a href="https://rozhawebdesigns.com/technologies/prodassist/v2/">Full feature guide</a>
+          ·
+          <a href="https://rozhawebdesigns.com/technologies/prodassist/companion/">Windows companion</a>
+        </p>
+      </div>
+      <div>
+        <img class="hero-shot" src="assets/phone-01-hero.png" width="960" height="540" alt="ProdAssist camera viewfinder on Android" />
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>Built for creators and live production</h2>
+      <div class="grid-3">
+        <div class="card">
+          <strong>Camera you control</strong>
+          <span>Exposure, monitoring, recording, and going live from one app.</span>
+        </div>
+        <div class="card">
+          <strong>Mixer &amp; HDMI</strong>
+          <span>Extra cameras, overlays, and clean feeds to a display or stream.</span>
+        </div>
+        <div class="card">
+          <strong>Webcam on your PC</strong>
+          <span>Switch phones in the companion; output to any desktop app.</span>
+        </div>
+      </div>
+      <ul class="features" style="margin-top:1.5rem;">
+        <li>Free tier with optional <strong>Pro</strong> and <strong>Studio</strong> subscriptions</li>
+        <li>Package: <code>com.rozhaustech.prodassist</code> · by Rozha&apos;s Technologies</li>
+        <li>Not designed for children — camera and microphone app</li>
+      </ul>
+    </section>
+
+    <section class="wrap">
+      <h2>Screenshots</h2>
+      <div class="shots">
+        <img src="assets/phone-02-viewfinder.png" alt="Manual camera controls" loading="lazy" />
+        <img src="assets/phone-07-companion.png" alt="Windows companion integration" loading="lazy" />
+      </div>
+    </section>
+
+    <section class="wrap">
+      <h2>Install</h2>
+      <p class="lede" style="margin-bottom:1rem;">
+        Prefer the public store when available. If you are joining our closed test, use the Rozha opt-in form
+        (same Google account as on your phone), then open the testing link Google Play sends you.
+      </p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.rozhaustech.prodassist" rel="noopener">Google Play</a>
+        <a class="btn btn-ghost" href="https://rozhawebdesigns.com/technologies/Android-testings-rozha-apps/" rel="noopener">Tester signup (Rozha apps)</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>
+      <a href="https://rozhawebdesigns.com/technologies/">Rozha&apos;s Technologies</a>
+      ·
+      <a href="mailto:rozharichardson@gmail.com">rozharichardson@gmail.com</a>
+    </p>
+    <p style="margin-top:0.75rem;">
+      Source code is private. This page is the public home for ProdAssist on GitHub Pages.
+    </p>
+  </footer>
+</body>
+</html>

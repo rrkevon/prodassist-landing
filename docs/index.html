@@ -11,11 +11,11 @@
   <meta property="og:description" content="Manual camera, live graphics, HDMI, RTMP, and a Windows webcam companion. Get ProdAssist on Google Play." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://rrkevon.github.io/prodassist-landing/" />
-  <meta property="og:image" content="https://rrkevon.github.io/prodassist-landing/assets/phone-01-hero.png" />
+  <meta property="og:image" content="https://rrkevon.github.io/prodassist-landing/assets/phone-02-viewfinder.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="ProdAssist for Android" />
   <meta name="twitter:description" content="Cinema-style controls, streaming, and a Windows companion webcam." />
-  <meta name="twitter:image" content="https://rrkevon.github.io/prodassist-landing/assets/phone-01-hero.png" />
+  <meta name="twitter:image" content="https://rrkevon.github.io/prodassist-landing/assets/phone-02-viewfinder.png" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -117,10 +117,23 @@
       border: 1px solid var(--border);
     }
     .note { font-size: 0.85rem; color: var(--muted); margin: 0.5rem 0 0; }
+    .hero-media {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 0;
+    }
     .hero-shot {
+      display: block;
       width: 100%;
+      max-width: 540px;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      object-position: center;
       border-radius: var(--radius);
       border: 1px solid var(--border);
+      background: #0a0e12;
       box-shadow: 0 24px 60px rgba(0,0,0,0.45);
     }
     section { padding: 2.5rem 0; border-top: 1px solid var(--border); }
@@ -148,6 +161,10 @@
     @media (min-width: 640px) { .shots { grid-template-columns: 1fr 1fr; } }
     .shots img {
       width: 100%;
+      height: auto;
+      aspect-ratio: 16 / 9;
+      object-fit: contain;
+      background: #0a0e12;
       border-radius: var(--radius);
       border: 1px solid var(--border);
     }
@@ -193,8 +210,8 @@
           <a href="https://rozhawebdesigns.com/technologies/prodassist/companion/">Windows companion</a>
         </p>
       </div>
-      <div>
-        <img class="hero-shot" src="assets/phone-01-hero.png" width="960" height="540" alt="ProdAssist camera viewfinder on Android" />
+      <div class="hero-media">
+        <img class="hero-shot" src="assets/phone-02-viewfinder.png" width="1920" height="1080" alt="ProdAssist manual camera viewfinder on Android" />
       </div>
     </section>
 
@@ -224,7 +241,7 @@
     <section class="wrap">
       <h2>Screenshots</h2>
       <div class="shots">
-        <img src="assets/phone-02-viewfinder.png" alt="Manual camera controls" loading="lazy" />
+        <img src="assets/phone-01-hero.png" alt="ProdAssist app overview" loading="lazy" />
         <img src="assets/phone-07-companion.png" alt="Windows companion integration" loading="lazy" />
       </div>
     </section>

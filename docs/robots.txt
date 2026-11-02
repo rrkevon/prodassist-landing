@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rrkevon.github.io/prodassist-landing/sitemap.xml

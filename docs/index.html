@@ -16,6 +16,7 @@
   <meta name="twitter:title" content="ProdAssist for Android" />
   <meta name="twitter:description" content="Cinema-style controls, streaming, and a Windows companion webcam." />
   <meta name="twitter:image" content="https://rrkevon.github.io/prodassist-landing/assets/phone-02-viewfinder.png" />
+  <link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -33,12 +34,61 @@
     "sameAs": [
       "https://play.google.com/store/apps/details?id=com.rozhaustech.prodassist",
       "https://play.google.com/apps/testing/com.rozhaustech.prodassist",
-      "https://rozhawebdesigns.com/technologies/prodassist/v2/"
+      "https://rozhawebdesigns.com/technologies/prodassist/v2/",
+      "https://alternativeto.net/software/prodassist/"
     ],
     "author": {
       "@type": "Organization",
       "name": "Rozha's Technologies"
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does ProdAssist work with OBS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Install the Windows companion, put a phone on air in ProdAssist, and the companion exposes that feed as a virtual webcam that OBS and other desktop apps can select like any other camera."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I use my Android phone as a webcam for Zoom or Microsoft Teams?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The Windows companion outputs the active ProdAssist phone as a webcam for Zoom, Teams, and similar meeting apps, not only OBS."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is ProdAssist free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ProdAssist has a free tier. Optional Pro and Studio subscriptions unlock advanced features. See Google Play for current pricing."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does ProdAssist work on iPhone?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ProdAssist is Android-only. The Windows companion runs on PC; there is no iOS app at this time."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can ProdAssist stream over RTMP or HDMI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. ProdAssist supports RTMP streaming and HDMI program output on supported devices, plus manual camera controls and monitoring tools on the phone."
+        }
+      }
+    ]
   }
   </script>
   <style>
@@ -176,6 +226,21 @@
       border-top: 1px solid var(--border);
     }
     footer a { color: var(--muted); }
+    .faq { display: grid; gap: 0.65rem; margin: 0; }
+    .faq details {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.85rem 1rem;
+    }
+    .faq summary {
+      cursor: pointer;
+      font-weight: 600;
+      list-style: none;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq details[open] summary { margin-bottom: 0.5rem; }
+    .faq p { margin: 0; color: var(--muted); font-size: 0.95rem; }
   </style>
 </head>
 <body>
@@ -245,6 +310,36 @@
       <div class="shots">
         <img src="assets/phone-01-hero.png" alt="ProdAssist app overview" loading="lazy" />
         <img src="assets/phone-07-companion.png" alt="Windows companion integration" loading="lazy" />
+      </div>
+    </section>
+
+    <section class="wrap" id="faq">
+      <h2>Frequently asked questions</h2>
+      <div class="faq">
+        <details>
+          <summary>Does ProdAssist work with OBS?</summary>
+          <p>Yes. Install the Windows companion, put a phone on air in ProdAssist, and the companion exposes that feed as a virtual webcam that OBS (and other desktop apps) can select.</p>
+        </details>
+        <details>
+          <summary>Can I use my Android phone as a webcam for Zoom or Teams?</summary>
+          <p>Yes. The Windows companion outputs the active ProdAssist phone as a webcam for Zoom, Microsoft Teams, and similar meeting apps.</p>
+        </details>
+        <details>
+          <summary>Is ProdAssist free?</summary>
+          <p>There is a free tier. Optional Pro and Studio subscriptions unlock advanced features—see Google Play for current pricing.</p>
+        </details>
+        <details>
+          <summary>Does it work on iPhone?</summary>
+          <p>ProdAssist is Android-only. The companion app is for Windows PCs; there is no iOS version at this time.</p>
+        </details>
+        <details>
+          <summary>RTMP, HDMI, and manual camera controls?</summary>
+          <p>ProdAssist includes manual ISO, shutter, white balance, and focus, plus monitoring (histogram, zebras, peaking), RTMP streaming, and HDMI program output on supported devices.</p>
+        </details>
+        <details>
+          <summary>Public Play vs closed testing?</summary>
+          <p>Use the main Google Play button when the public listing is available. For closed testing, join the Rozha tester list first, then open the Play testing link with the same Google account as on your phone.</p>
+        </details>
       </div>
     </section>
 

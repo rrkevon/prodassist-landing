@@ -24,7 +24,9 @@ Marketing page for **ProdAssist** (`com.rozhaustech.prodassist`). This repo is *
 - `docs/index.html` — GitHub Pages site
 - `docs/assets/` — icon and store screenshots (from ProdAssist store assets)
 
-See [DISCOVERABILITY.md](DISCOVERABILITY.md) and [SOCIAL-DRAFTS.md](SOCIAL-DRAFTS.md) for growth checklist and ready-to-post copy.
+See [DISCOVERABILITY.md](DISCOVERABILITY.md), [DIRECTORY-SUBMISSIONS.md](DIRECTORY-SUBMISSIONS.md), [COMMUNITY-OUTREACH.md](COMMUNITY-OUTREACH.md), and [SOCIAL-DRAFTS.md](SOCIAL-DRAFTS.md) for growth checklist and ready-to-post copy.
+
+**SEO on Pages:** `docs/sitemap.xml`, `docs/robots.txt`, FAQ on `docs/index.html`.
 
 ## Pages setup
 
